@@ -881,6 +881,40 @@ namespace NBitcoin.Tests
 			};
 		}
 
+		public class FantasyGoldNodeDownloadData
+		{
+			public NodeDownloadData v1_2_7 = new NodeDownloadData()
+			{
+				Version = "1.2.7",
+				Windows = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/FantasyGold/FantasyGold-Core/releases/download/v{0}/FantasyGold-{0}-Windows-x64.zip",
+					Archive = "fantasygold-{0}-win64.zip",
+					Executable = "fantasygold-{0}/bin/fantasygold.exe",
+					
+				},
+				Linux = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/FantasyGold/FantasyGold-Core/releases/download/v{0}/FantasyGold-{0}-Linux-x64.tar.gz",
+					Archive = "fantasygold-{0}-linux64.tar.gz",
+					Executable = "fantasygold-{0}/bin/fantasygoldd",
+					
+				},
+				//Mac = new NodeOSDownloadData()
+				{
+					//DownloadLink = "https://github.com/FantasyGold/FantasyGold-Core/releases/download/v{0}/FantasyGold-{0}-osx-x64.tar.gz",
+					//Archive = "fantasygold-{0}-osx64.tar.gz",
+					//Executable = "fantasygold-{0}/bin/fantasygoldd",
+
+				}
+			};
+		}
+
+		public static FantasyGoldNodeDownloadData FantasyGold
+		{
+			get; set;
+		} = new FantasyGoldNodeDownloadData();
+
 		public static GoByteNodeDownloadData GoByte
 		{
 			get; set;
